@@ -1,4 +1,4 @@
-name: PHP Composer
+name: Implementasi CI/CD
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  tests:
 
     runs-on: ubuntu-latest
 
@@ -34,3 +34,19 @@ jobs:
 
     - name: Run test suite
       run: composer run-script test
+
+  deploy:
+  needs: [tests]
+  runs-on: ubuntu-latest
+  steps:
+    - name: "SSH to VM"
+      uses: appleboy/ssh-action@master
+      with:
+        key: ${{secrets.SSH_PRIVATE_KEY}}
+        host: ${{secrets.SSH_HOST}}
+        username: ${{secrets.SSH_USER}}
+        port: ${{secrets.SSH_PORT}}
+        script: |
+          cd uas-project-el/app
+          git pull
+

@@ -36,9 +36,9 @@ jobs:
       run: composer run-script test
 
   deploy:
-  needs: [tests]
-  runs-on: ubuntu-latest
-  steps:
+    needs: [tests]
+    runs-on: ubuntu-latest
+    steps:
     - name: "SSH to VM"
       uses: appleboy/ssh-action@master
       with:

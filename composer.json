@@ -12,5 +12,7 @@
   },
   "scripts": {
     "test": "vendor/bin/phpunit MatematikaTest.php"
-  }
+  },
+    "license": "MIT"
+  
 }

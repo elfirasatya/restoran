@@ -48,5 +48,5 @@ jobs:
         port: ${{secrets.SSH_PORT}}
         script: |
           cd uas-project-el/app
-          git pull
+          sudo git pull
 

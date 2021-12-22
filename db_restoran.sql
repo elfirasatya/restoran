@@ -201,7 +201,7 @@ CREATE TABLE `tb_user` (
 --
 
 INSERT INTO `tb_user` (`id_user`, `username`, `password`, `nama_user`, `id_level`, `status`) VALUES
-(1, 'admin', '123', 'Hendrik Setiawan', 1, 'aktif'),
+(1, 'elfirasatya', '123', 'Elfira Satya Pramesti', 1, 'aktif'),
 (6, 'hendro', '123', 'Hendro', 2, 'aktif'),
 (7, 'fitri', '123', 'Fitri', 3, 'aktif'),
 (8, 'slamet', '123', 'Slamet', 4, 'aktif'),

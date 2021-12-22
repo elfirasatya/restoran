@@ -1,0 +1,16 @@
+{
+  "name": "mmalb/restoran",
+  "description": "El Restaurant App",
+  "authors": [
+    {
+      "name": "Elfira Satya",
+      "email": "jhaluvucinic@gmail.com"
+    }
+  ],
+  "require": {
+    "phpunit/phpunit": "^9.5"
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit MatematikaTest.php"
+  }
+}
